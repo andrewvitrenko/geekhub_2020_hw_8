@@ -37,7 +37,7 @@ function App() {
   }
 
   return (
-    <div className="wrapper">
+    <div className="wrapper">    
       <div className="clock">
         <Time date={outputDate} />
 
