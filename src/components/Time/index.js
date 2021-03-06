@@ -1,5 +1,12 @@
 export function Time(props) {
-    const {date} = props;
+    const {time, format} = props.data;
+
+    const date = {
+        hours: (+time[0] > 12 && format === '12') ? +time[0] - 12 : +time[0],
+        minutes: +time[1],
+        seconds: +time[2],
+        parametr: ((format === '12' && +time[0] < 12) ? 'AM' : '') || ((format === '12' && +time[0] >= 12) ? 'PM' : '') || '',
+    }
     
     return(
         <div className="time">

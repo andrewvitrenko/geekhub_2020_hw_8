@@ -1,9 +1,9 @@
-import ukraine from '../../img/flags/ukraine.png';
-import great_britain from '../../img/flags/great_britain.png';
-import usa from '../../img/flags/usa.png';
-import australia from '../../img/flags/australia.png';
-import new_zeland from '../../img/flags/new_zeland.png';
-import egypt from '../../img/flags/egypt.png';
+import ukraine from '../../assets/img/flags/ukraine.png';
+import great_britain from '../../assets/img/flags/great_britain.png';
+import usa from '../../assets/img/flags/usa.png';
+import australia from '../../assets/img/flags/australia.png';
+import new_zeland from '../../assets/img/flags/new_zeland.png';
+import egypt from '../../assets/img/flags/egypt.png';
 
 export function Countries(props) {
     const {country, onClickHandler} = props;
