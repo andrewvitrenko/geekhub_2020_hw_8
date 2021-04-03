@@ -33,11 +33,19 @@ html, body {
   flex-direction: column;
 }
 
-span.active {
+button {
+  background: none;
+  color: inherit;
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+button.active {
   color: black;
 }
 
-span {
+button {
   cursor: pointer;
 }
 
