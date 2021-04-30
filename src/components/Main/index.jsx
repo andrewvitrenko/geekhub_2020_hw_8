@@ -3,6 +3,7 @@ import moment from 'moment-timezone';
 import Time from '../Time';
 import Switch from '../Switch';
 import Countries from '../Countries';
+import { getTimeRegexp } from '../../const';
 
 export default function Main() {
   const [format, setFormat] = useState('24');
@@ -11,7 +12,6 @@ export default function Main() {
   const [date, setDate] = useState(moment.tz(currentTimezone).format());
   // ---working with timezones------
 
-  const getTimeRegexp = /\d{2}:\d{2}:\d{2}/;
   const time = date.match(getTimeRegexp)[0].split(':');
 
   const timeInterval = setTimeout(() => {

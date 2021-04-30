@@ -1,8 +1,6 @@
 import React from 'react';
 
-export default function Time(props) {
-  const { time, format } = props;
-
+export default function Time({ time, format }) {
   const date = {
     hours: (+time[0] > 12 && format === '12') ? +time[0] - 12 : +time[0],
     minutes: +time[1],

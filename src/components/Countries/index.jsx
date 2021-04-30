@@ -1,52 +1,12 @@
 import React from 'react';
-import ukraine from '../../assets/img/flags/ukraine.png';
-import greatBritain from '../../assets/img/flags/great_britain.png';
-import usa from '../../assets/img/flags/usa.png';
-import australia from '../../assets/img/flags/australia.png';
-import newZeland from '../../assets/img/flags/new_zeland.png';
-import egypt from '../../assets/img/flags/egypt.png';
+import { countries } from '../../const';
 
-const countries = [
-  {
-    name: 'Ukraine',
-    flag: ukraine,
-    code: 'UA',
-  },
-  {
-    name: 'Great Britain',
-    flag: greatBritain,
-    code: 'GB',
-  },
-  {
-    name: 'USA',
-    flag: usa,
-    code: 'US',
-  },
-  {
-    name: 'Australia',
-    flag: australia,
-    code: 'AU',
-  },
-  {
-    name: 'New Zeland',
-    flag: newZeland,
-    code: 'NZ',
-  },
-  {
-    name: 'Egypt',
-    flag: egypt,
-    code: 'EG',
-  },
-];
-
-export default function Countries(props) {
-  const { country, onClickHandler } = props;
-
+export default function Countries({ country, onClickHandler }) {
   return (
     <ul className="country_list">
       {
         countries.map((item, i) => (
-          <li className={country === item.code ? 'active' : ''}>
+          <li key={item.code} className={country === item.code ? 'active' : ''}>
             {i + 1}
             .
             <img src={item.flag} alt="flag" className="flag" />

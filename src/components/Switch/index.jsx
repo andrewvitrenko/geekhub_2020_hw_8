@@ -1,8 +1,6 @@
 import React from 'react';
 
-export default function Switch(props) {
-  const { format, onClickHandler } = props;
-
+export default function Switch({ format, onClickHandler }) {
   return (
     <div className="switch">
       <button type="button" className={format === '24' ? '24 active' : '24'} onClick={() => onClickHandler('24')}>
